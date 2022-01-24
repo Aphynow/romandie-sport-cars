@@ -1,4 +1,7 @@
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
   color: $main;
   background: $second;
   background-image: url("../../public/assets/images/logowhite.png");
@@ -20,7 +23,7 @@ nav {
     }
   }
   &:not(.hide) {
-    box-shadow: #000 0px 0px 5px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
   }
 
   ul {
