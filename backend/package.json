@@ -1,0 +1,21 @@
+{
+  "name": "aphy-backend",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2",
+    "sequelize": "^6.14.0",
+    "sqlite3": "^5.0.2"
+  },
+  "scripts": {
+    "dev": "nodemon main.js",
+    "start": "node main.js"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.4.1"
+  }
+}

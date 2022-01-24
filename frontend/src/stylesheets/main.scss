@@ -1,0 +1,45 @@
+@import "reset";
+@import "variables";
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Lobster&display=swap");
+
+// font-family: 'Lato', sans-serif;
+// font-family: 'Lobster', cursive;
+
+.App {
+  font-family: "Lato", sans-serif;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  background: $main;
+  background-image: url("../../public/assets/images/logoclear.png");
+  background-repeat: no-repeat;
+  background-position: bottom -0.45rem right 1rem;
+  background-size: 300px;
+  background-attachment: fixed;
+  max-height: 100vh;
+  max-width: 100vw;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  @import "navbar";
+  section {
+    max-height: 100vh;
+    width: calc(100vw - 50px);
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+      background-color: $main;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $third;
+      border-radius: 4px;
+      &:hover {
+        background: $fourth;
+      }
+    }
+    header {
+      background: yellow;
+    }
+  }
+}

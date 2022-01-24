@@ -1,0 +1,11 @@
+{
+  "name": "aphy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "concurrently -n back,front \"yarn dev:back\" \"yarn dev:front\"",
+    "dev:front": "cd frontend && yarn start",
+    "dev:back": "cd backend && yarn dev"
+  }
+}
