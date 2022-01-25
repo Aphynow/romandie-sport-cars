@@ -8,7 +8,7 @@
 .App {
   font-family: "Lato", sans-serif;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 0.5rem;
   background: $main;
   background-image: url("../../public/assets/images/logoclear.png");
@@ -29,11 +29,25 @@
   }
   @import "global";
   @import "navbar";
+  @import "header";
   main {
     max-height: calc(100vh - 150px);
-    width: calc(100vw - 50px);
+    width: calc(100vw - calc(50px + 1rem + 40vw));
     overflow-y: scroll;
     padding-bottom: 150px;
+
+    padding: {
+      left: 20vw;
+      right: 20vw;
+      bottom: 1rem;
+    }
+    @media (max-width: 800px) {
+      width: calc(100vw - calc(50px + 3rem));
+      padding: {
+        left: 1rem;
+        right: 1rem;
+      }
+    }
     &::-webkit-scrollbar {
       width: 8px;
       height: 8px;
@@ -46,36 +60,6 @@
         background: $fourth;
       }
     }
-
-    header {
-      margin-bottom: 2rem;
-      h1 {
-        color: $second;
-        font-family: "Lobster", cursive;
-        font-size: 3rem;
-        text-align: center;
-        padding: 1rem;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-      }
-    }
-    section {
-      background: rgba($third, 0.5);
-      border-radius: 0.5rem;
-      padding: 1rem;
-      box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 5px;
-      letter-spacing: 0.5px;
-
-      margin: {
-        left: 20vw;
-        right: 20vw;
-        bottom: 1rem;
-      }
-      @media (max-width: 800px) {
-        margin: {
-          left: 1rem;
-          right: 1rem;
-        }
-      }
-    }
+    @import "section";
   }
 }

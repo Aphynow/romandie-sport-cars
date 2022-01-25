@@ -42,6 +42,9 @@ nav {
     gap: 1.5rem;
     margin-left: 1rem;
     margin-top: 1rem;
+    a {
+      text-decoration: none;
+    }
     li {
       display: flex;
       flex-direction: row;
@@ -59,8 +62,8 @@ nav {
       .icon {
         width: 20px;
       }
-      &:first-of-type {
-        margin-bottom: 1rem;
+      &.toggleMenu {
+        margin-bottom: 2rem;
       }
     }
   }
