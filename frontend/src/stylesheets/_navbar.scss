@@ -46,7 +46,7 @@ nav {
       display: flex;
       flex-direction: row;
       gap: 1rem;
-      // padding: 1rem;
+
       font-family: "Lobster", cursive;
       cursor: pointer;
       &:hover {
@@ -69,7 +69,6 @@ nav {
     flex-direction: column;
     gap: 1rem;
     justify-content: center;
-
     margin-left: 1rem;
     margin-bottom: 1rem;
   }
