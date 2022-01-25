@@ -1,3 +1,7 @@
-export default function Home(){
-    return <div className="Home">C'est la home</div>
+export default function Home() {
+  return (
+    <div className="Home">
+      <section>C'est la home</section>
+    </div>
+  );
 }
