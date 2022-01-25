@@ -1,7 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faFacebookSquare,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
+import {
   faBars,
-  faCocktail,
   faNewspaper,
   faImages,
   faCalendar,
@@ -69,6 +72,15 @@ export default function Navbar() {
           <span className="text">Contact</span>
         </li>
       </ul>
+
+      <div className="social">
+        <a href="google.ch">
+          <FontAwesomeIcon icon={faFacebookSquare} />
+        </a>
+        <a href="google.ch">
+          <FontAwesomeIcon icon={faInstagram} />
+        </a>
+      </div>
     </nav>
   );
 }
