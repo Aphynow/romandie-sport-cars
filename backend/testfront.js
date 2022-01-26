@@ -3,8 +3,9 @@ const axios = require("axios");
 // setInterval(() => {
 axios
   .post("http://localhost:8000/signup", {
-    login: "Jeremy",
-    firstName: "Jérémy MARTIN",
+    email: "tanguymajeux@gmail.com",
+    firstName: "Tanguy",
+    lastName: "MAJEUX",
     password: "azerty",
     passwordbis: "azerty",
   })

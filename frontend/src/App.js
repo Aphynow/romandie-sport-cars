@@ -1,12 +1,21 @@
 import "./stylesheets/main.scss";
+import Login from "./components/Login";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import { Agenda, Contact, Galerie, Home, Liens, Membres, News } from "./pages";
 import { Routes, Route } from "react-router-dom";
+import { useState } from "react";
 function App() {
+  const [openLogin, setOpenLogin] = useState(false);
+
+  const toggleLogin = () => {
+    setOpenLogin(!openLogin);
+  };
+
   return (
     <div className="App">
-      <Navbar />
+      {openLogin && <Login toggleLogin={toggleLogin} />}
+      <Navbar toggleLogin={toggleLogin} />
       <Header />
       <main>
         <Routes>

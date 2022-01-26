@@ -7,13 +7,14 @@
 
 .App {
   font-family: "Lato", sans-serif;
+  color: $fifth;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   background: $main;
   background-image: url("../../public/assets/images/logoclear.png");
   background-repeat: no-repeat;
-  background-position: bottom -0.45rem right 1rem;
+  background-position: bottom right 1rem;
   background-size: 300px;
   background-attachment: fixed;
   min-height: 100vh;
@@ -30,6 +31,7 @@
   @import "global";
   @import "navbar";
   @import "header";
+  @import "login";
   main {
     max-height: calc(100vh - 150px);
     width: calc(100vw - calc(50px + 1rem + 40vw));
@@ -61,5 +63,6 @@
       }
     }
     @import "section";
+    @import "members";
   }
 }
