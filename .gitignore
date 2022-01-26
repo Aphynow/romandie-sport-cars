@@ -3,3 +3,4 @@ node_modules
 yarn.lock
 frontend/yarn.lock
 backend/yarn.lock
+frontend/node_modules
