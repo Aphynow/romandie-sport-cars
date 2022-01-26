@@ -12,15 +12,16 @@ import {
   faUsers,
   faEnvelope,
   faHome,
+  faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar({ toggleLogin }) {
+  // console.log(setOpenLogin);
   const Menu = useRef(false);
 
   const toggleMenu = () => {
-    console.log("OPEN", Menu.current);
     Menu.current.classList.toggle("hide");
   };
 
@@ -86,6 +87,12 @@ export default function Navbar() {
             <span className="text">Contact</span>
           </li>
         </Link>
+        <li onClick={toggleLogin}>
+          <span className="icon">
+            <FontAwesomeIcon icon={faUser} />
+          </span>
+          <span className="text">Login</span>
+        </li>
       </ul>
 
       <div className="social">
