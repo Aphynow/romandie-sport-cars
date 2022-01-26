@@ -6,7 +6,7 @@ import { Agenda, Contact, Galerie, Home, Liens, Membres, News } from "./pages";
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 function App() {
-  const [openLogin, setOpenLogin] = useState(true);
+  const [openLogin, setOpenLogin] = useState(false);
 
   const toggleLogin = () => {
     setOpenLogin(!openLogin);
