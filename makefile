@@ -1,6 +1,6 @@
 install:
-	cd frontend && yarn
-	cd backend && yarn
+	cd frontend && yarn install --silent
+	cd backend && yarn install --silent
 
 clear:
 	cd frontend && rm -rf node_modules
