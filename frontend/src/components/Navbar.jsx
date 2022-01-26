@@ -95,14 +95,29 @@ export default function Navbar({ toggleLogin }) {
         </li>
       </ul>
 
-      <div className="social">
-        <a href="google.ch">
-          <FontAwesomeIcon icon={faFacebookSquare} />
+      {/* <div className="social"> */}
+      <ul>
+        {/* <a href="google.ch">
+          <li>
+            <span className="icon">
+              <FontAwesomeIcon icon={faFacebookSquare} />
+            </span>
+            <span className="text">Facebook</span>
+          </li>
+        </a> */}
+        <a
+          target="_blank"
+          href="https://www.instagram.com/romandie_sport_cars/"
+        >
+          <li>
+            <span className="icon">
+              <FontAwesomeIcon icon={faInstagram} />
+            </span>
+            <span className="text">Instagram</span>
+          </li>
         </a>
-        <a href="google.ch">
-          <FontAwesomeIcon icon={faInstagram} />
-        </a>
-      </div>
+      </ul>
+      {/* </div> */}
     </nav>
   );
 }
