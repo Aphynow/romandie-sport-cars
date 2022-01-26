@@ -26,6 +26,14 @@ Valid the modification and allow you to put a comment on it.
 
 Send (all) the local commit(s) on the distant branch.
 
+### `git pull`
+
+Pick up all the modifications who have beed added to the distant branch.
+
+### `git rebase main`
+
+Rebase the local current branch with the main branch.
+
 ### `make install`
 
 Install all the dependencies who have been added on the project.
@@ -33,4 +41,3 @@ Install all the dependencies who have been added on the project.
 ### `make clear`
 
 Remove all the dependencies.
-
