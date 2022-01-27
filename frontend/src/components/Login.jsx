@@ -2,9 +2,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { useRef, useState } from "react";
 import axios from "axios";
+import { useCookies } from "react-cookie";
 
 export default function Login({ toggleLogin }) {
   const [inscrip, setInscript] = useState(false);
+  const [cookies, setCookie] = useCookies(["user"]);
+
 
   const login = useRef(false);
   const password = useRef(false);
@@ -24,7 +27,7 @@ export default function Login({ toggleLogin }) {
           let errTarget = document.querySelector(`#${target}`);
           return errTarget.classList.toggle("error");
         }
-
+        setCookie("user", data, { path: "/" });
         return toggleLogin();
       })
       .catch((err) => {
