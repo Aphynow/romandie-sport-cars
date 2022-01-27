@@ -28,7 +28,7 @@ Send (all) the local commit(s) on the distant branch.
 
 ### `git pull`
 
-Pick up all the modifications who have beed added to the distant branch.
+Pick up all the modifications who have been added to the distant branch.
 
 ### `git rebase main`
 
