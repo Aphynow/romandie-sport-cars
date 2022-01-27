@@ -12,7 +12,7 @@ Switch on the branch you're looking for.
 
 ### `git checkout -b <name>`
 
-Create a new branch. You must give a <name> to it.
+Create a new branch. You must give a name to it.
 
 ### `git add .`
 
