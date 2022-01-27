@@ -1,12 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Membres() {
   const [members, setMembers] = useState(false);
 
   useEffect(() => {
     if (!members) {
-      axios.get("/users").then(({ data }) => {
+      axios.get("/member/all").then(({ data }) => {
         setMembers(data);
       });
     }
@@ -24,6 +25,9 @@ export default function Membres() {
                 <div>{member.lastName}</div>
                 <div>{member.email}</div>
                 <div>{member.birthday}</div>
+                <div>
+                  <Link to={`/profil/${member.id}`}>lien</Link>
+                </div>
               </div>
             );
           })}

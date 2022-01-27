@@ -2,7 +2,17 @@ import "./stylesheets/main.scss";
 import Login from "./components/Login";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
-import { Agenda, Contact, Galerie, Home, Liens, Membres, News } from "./pages";
+import {
+  Agenda,
+  Contact,
+  Galerie,
+  Home,
+  Liens,
+  Membres,
+  News,
+  Admin,
+  Profil,
+} from "./pages";
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 function App() {
@@ -26,6 +36,8 @@ function App() {
           <Route path="/liens" element={<Liens />} />
           <Route path="/membres" element={<Membres />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/profil/:id" element={<Profil />} />
         </Routes>
       </main>
     </div>

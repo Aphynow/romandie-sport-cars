@@ -13,11 +13,16 @@ import {
   faEnvelope,
   faHome,
   faUser,
+  faCog,
+  faPowerOff,
 } from "@fortawesome/free-solid-svg-icons";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 
+import { useCookies } from "react-cookie";
+
 export default function Navbar({ toggleLogin }) {
+  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
   // console.log(setOpenLogin);
   const Menu = useRef(false);
 
@@ -87,15 +92,48 @@ export default function Navbar({ toggleLogin }) {
             <span className="text">Contact</span>
           </li>
         </Link>
-        <li onClick={toggleLogin}>
-          <span className="icon">
-            <FontAwesomeIcon icon={faUser} />
-          </span>
-          <span className="text">Login</span>
-        </li>
+
+        {cookies.user ? (
+          <>
+            <Link to={`/profil/${cookies.user.id}`}>
+              <li>
+                <span className="icon">
+                  <FontAwesomeIcon icon={faUser} />
+                </span>
+                <span className="text">Profil</span>
+              </li>
+            </Link>
+            <li
+              onClick={() => {
+                removeCookie("user", { path: "/" });
+              }}
+            >
+              <span className="icon">
+                <FontAwesomeIcon icon={faPowerOff} />
+              </span>
+              <span className="text">Logout</span>
+            </li>
+          </>
+        ) : (
+          <li onClick={toggleLogin}>
+            <span className="icon">
+              <FontAwesomeIcon icon={faUser} />
+            </span>
+            <span className="text">Login</span>
+          </li>
+        )}
+      </ul>
+      <ul>
+        <Link to="/admin">
+          <li>
+            <span className="icon">
+              <FontAwesomeIcon icon={faCog} />
+            </span>
+            <span className="text">Admin</span>
+          </li>
+        </Link>
       </ul>
 
-      {/* <div className="social"> */}
       <ul>
         {/* <a href="google.ch">
           <li>
@@ -107,6 +145,7 @@ export default function Navbar({ toggleLogin }) {
         </a> */}
         <a
           target="_blank"
+          rel="noreferrer"
           href="https://www.instagram.com/romandie_sport_cars/"
         >
           <li>
@@ -117,7 +156,6 @@ export default function Navbar({ toggleLogin }) {
           </li>
         </a>
       </ul>
-      {/* </div> */}
     </nav>
   );
 }
