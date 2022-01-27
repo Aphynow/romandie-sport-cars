@@ -36,7 +36,7 @@ export default function Login({ toggleLogin }) {
   };
 
   const toggleForm = () => {
-    console.log("TOggle Form");
+    // console.log("TOggle Form");
     setInscript(!inscrip);
   };
 

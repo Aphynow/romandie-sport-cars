@@ -1,0 +1,34 @@
+#Agenda {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .header {
+    margin-bottom: 2rem;
+  }
+  .calendar {
+    // background: red;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 5px;
+    .week {
+      display: flex;
+      flex-direction: row;
+      &.name {
+        background: $second;
+        color: $main;
+        border-radius: 0.5rem 0.5rem 0 0;
+        .day {
+          height: 25px;
+          font-size: 0.85rem;
+        }
+      }
+      .day {
+        width: 80px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
