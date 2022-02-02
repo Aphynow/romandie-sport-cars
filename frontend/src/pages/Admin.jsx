@@ -1,3 +1,7 @@
 export default function Admin() {
-  return <div className="Admin">C'est l'Admin</div>;
+  return (
+    <div className="Admin">
+      <section>C'est l'Admin</section>
+    </div>
+  );
 }
