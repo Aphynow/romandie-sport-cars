@@ -1,3 +1,7 @@
-export default function Galerie(){
-    return <div className="Galerie">C'est la Galerie</div>
+export default function Galerie() {
+  return (
+    <div className="Galerie">
+      <section>C'est la Galerie</section>
+    </div>
+  );
 }
